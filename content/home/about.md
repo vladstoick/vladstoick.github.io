@@ -21,8 +21,7 @@ widget = "about"
 # Biography
 
 I am a second year student at King's College London studying Computer Science with Management.
-In my first year, I have achieved a first with a grade of 88.5, which was the highest grade
-from my course.
+In my first year, I have achieved a first grade and I also obtained "Computer Science with Management Prize" for achieving the highest grade from my course.
 
 I have been working as a backend developer at [Lostmy.name](https://lostmy.name)
 for over a year where we have a backend built on the e-commerce platform [Solidus](https://github.com/solidusio/solidus).
