@@ -7,6 +7,21 @@ draft = false
 widget = "about"
 
 
+# Work
+
+[work]
+  title = "Work"
+
+[[work.positions]]
+  position = "Backend developer"
+  employee = "Lostmy.name"
+  duration = "July 2015 to present"
+
+[[work.positions]]
+  position = "Summer internship"
+  employee = "Microsoft Romania"
+  duration = "June 2014 to August 2014"
+
 # List your qualifications (such as academic degrees).
 [education]
   title = "Education"
@@ -16,6 +31,10 @@ widget = "about"
   institution = "King's College London"
   year = "2015-2018"
 
+[[education.courses]]
+  course = "High School"
+  institution = "National College Of Computer Science Tudor Vianu"
+  year =  "2011-2015"
 +++
 
 # Biography

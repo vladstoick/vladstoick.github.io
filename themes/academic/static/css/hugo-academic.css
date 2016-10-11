@@ -265,15 +265,11 @@ blockquote p:last-child {
   font-size: 2rem;
 }
 
-ul.ul-interests li {
-  font-size: 0.9rem;
-}
-
 ul.ul-edu {
   list-style: none;
 }
 
-ul.ul-edu li {
+ul.ul-edu li, ul.ul-work li {
   position: relative;
   padding: 0px 15px 4px 3px;
 }
