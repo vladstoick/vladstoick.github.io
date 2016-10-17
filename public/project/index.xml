@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Project-rsses on Vlad Stoica</title>
+    <link>http://www.vladstoica.me/project/index.xml</link>
+    <description>Recent content in Project-rsses on Vlad Stoica</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Vlad Stoica</copyright>
+    <lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://www.vladstoica.me/project/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Carnetul de note</title>
+      <link>http://www.vladstoica.me/project/carnetul-de-note/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.vladstoica.me/project/carnetul-de-note/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
