@@ -1,12 +1,11 @@
-baseurl = "http://www.stoicavlad.com/"
-title = "Stoica Vlad"
+baseurl = "http://www.vladstoica.me/"
+title = "Vlad Stoica"
 copyright = "&copy; Vlad Stoica"
 languageCode = "en-us"
-theme = "academic"
+theme = "personal"
 
 # Enable analytics by entering your Google Analytics tracking ID
 googleAnalytics = ""
-
 
 [params]
   name = "Vlad Stoica"
@@ -52,13 +51,13 @@ googleAnalytics = ""
   #   Full list: https://jpswalsh.github.io/academicons/
 
   [[params.social]]
-    icon = "envelope"
-    icon_pack = "fa"
+    icon = "email_icon.svg"
+    name = "vlad96stoica@gmail.com"
     link = "mailto:test@vlad96stoica@gmail.com"
 
   [[params.social]]
-    icon = "github"
-    icon_pack = "fa"
+    icon = "github_icon.svg"
+    name = "vladstoick"
     link = "//github.com/vladstoick"
 
 

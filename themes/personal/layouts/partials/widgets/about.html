@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="about-portrait">
+        {{ with .root.Site.Params.avatar }}
+        <img src="{{ "/img/" | relURL }}{{ . }}" class="img-circle m-b-1" />
+        {{ end }}
+        <h1>{{ .root.Site.Params.name }}</h1>
+      </div>
+
+      {{ range .root.Site.Params.social }}
+      <ul class="list-unstyled about-social">
+        <li>
+          <a href="{{ .link }}">
+            <img src="{{ "/svg/" | relURL }}{{ .icon }}" class="p-r-1" />
+            {{ .name }}
+          </a>
+        </li>
+      </ul>
+      {{ end }}
+    </div>
+    <div class="col-md-8 about-biography">
+      {{ .page.Content }}
+      <div class="row m-t-2">
+        {{ with .page.Params.work }}
+        <div class="col-md-6">
+          <h3 class="m-b-1">{{ .title | default "Work" | markdownify }}</h3>
+          {{ range .positions }}
+            <div class="card card-block">
+              <h5 class="card-title">{{ .position }}, {{ .duration }}</h5>
+              <p class="card-text">{{ .employee }}</p>
+              {{ range .tags }}
+                <span class="tag tag-default">{{ .name }}</span>
+              {{ end }}
+            </div>
+          {{ end }}
+        </div>
+        {{ end }}
+
+        {{ with .page.Params.education }}
+        <div class="col-md-6">
+          <h3 class="m-b-1">{{ .title | default "Education" | markdownify }}</h3>
+          {{ range .courses }}
+            <div class="card card-block">
+              <h5 class="card-title">{{ .course }}, {{ .year }}</h5>
+              <p class="card-text">{{ .institution }}</p>
+            </div>
+          {{ end }}
+        </div>
+        {{ end }}
+
+      </div>
+    </div>
+  </div>
+</div>

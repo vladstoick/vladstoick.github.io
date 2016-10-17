@@ -1,41 +1,45 @@
-+++
-# About/Biography widget.
-
-date = "2016-04-20T00:00:00"
-draft = false
-
-widget = "about"
-
-
-# Work
-
-[work]
-  title = "Work"
-
-[[work.positions]]
-  position = "Backend developer"
-  employee = "Lostmy.name"
-  duration = "July 2015 to present"
-
-[[work.positions]]
-  position = "Summer internship"
-  employee = "Microsoft Romania"
-  duration = "June 2014 to August 2014"
-
-# List your qualifications (such as academic degrees).
-[education]
-  title = "Education"
-
-[[education.courses]]
-  course = "BSc in Computer Science with Management"
-  institution = "King's College London"
-  year = "2015-2018"
-
-[[education.courses]]
-  course = "High School"
-  institution = "National College Of Computer Science Tudor Vianu"
-  year =  "2011-2015"
-+++
+---
+  draft: false
+  date: 2016-04-20T00:00:00
+  widget: about
+  work:
+    title: Work
+    positions:
+      -
+        position: Backend developer
+        employee: Lostmy.name
+        duration: July 2015 to present
+        tags:
+          -
+            name: Ruby on Rails
+          -
+            name: Solidus
+          -
+            name: Twilio
+          -
+            name: AWS
+          -
+            name: Aftership
+      -
+        position: Summer internship
+        employee: Microsoft Romania
+        duration: June 2014 to August 2014
+        tags:
+          -
+            name: C#
+          -
+            name: Universal Windows Platform
+  education:
+    courses:
+      -
+        course: BSc in Computer Science with Management
+        institution: King's College London
+        year: 2015 - 2018
+      -
+        course: High School
+        institution: National College of Computer Science Tudor Vianu Bucharest
+        year: 2011 - 2015
+---
 
 # Biography
 

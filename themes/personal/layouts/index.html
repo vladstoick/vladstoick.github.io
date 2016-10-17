@@ -1,0 +1,12 @@
+{{ partial "header.html" . }}
+<body>
+  {{ partial "navbar.html" . }}
+
+  <div class="content">
+    {{ range $index, $page := where .Data.Pages "Type" "home" }}
+      {{ $params := dict "root" $ "page" $page }}
+      {{ $widget := printf "widgets/%s.html" $page.Params.widget }}
+      {{ partial $widget $params }}
+    {{ end }}
+  </div>
+</body>

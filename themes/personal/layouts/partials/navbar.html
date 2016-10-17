@@ -1,0 +1,12 @@
+<nav class="navbar navbar-light bg-faded m-b-1">
+  <div class="container">
+    <a class="navbar-brand" href="{{ "/" | relURL }}">{{ .Site.Title }}</a>
+    <ul class="nav navbar-nav pull-xs-right">
+      {{ range .Site.Menus.main }}
+        <li class="nav-item">
+          <a class="nav-link" href="{{ .URL | relURL }}">{{ .Name }}</a>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+</nav>
