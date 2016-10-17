@@ -17,9 +17,9 @@
           -
             name: Twilio
           -
-            name: AWS
-          -
             name: Aftership
+          -
+            name: SQL (Postgres)
       -
         position: Summer internship
         employee: Microsoft Romania
