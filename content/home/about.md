@@ -35,10 +35,16 @@
         course: BSc in Computer Science with Management
         institution: King's College London
         year: 2015 - 2018
+        achievements:
+          -
+            name: Computer Science with Management Prize
       -
         course: High School
         institution: National College of Computer Science Tudor Vianu Bucharest
         year: 2011 - 2015
+        achievements:
+          -
+            name: Two Silver Medals at National Olympiad of Computer Science
 ---
 
 # Biography

@@ -7,8 +7,7 @@
       name: Java
     -
       name: SQL (Sqlite) with Content Providers
-  title:
-    - Carnetul de note
+  project_title: Carnetul de note
   external_link: https://play.google.com/store/apps/details?id=com.stoicavlad.carnet
   external_link_title: View app on Play Store
 ---

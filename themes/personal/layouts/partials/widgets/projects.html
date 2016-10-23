@@ -4,7 +4,7 @@
       <h2>{{ with .page.Title }}{{ . | markdownify }}{{ end }}</h2>
       {{ range where .root.Data.Pages "Type" "project" }}
       <div class="card card-block">
-        <h5 class="card-title">{{ .Title }}</h5>
+        <h5 class="card-title">{{ .Params.project_title }}</h5>
         <p class="card-text">{{ .Content }}</p>
         <p>
           {{ range .Params.tags }}

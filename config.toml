@@ -60,6 +60,10 @@ googleAnalytics = ""
     name = "vladstoick"
     link = "//github.com/vladstoick"
 
+  [[params.social]]
+    icon = "cv_icon.svg"
+    name = "View CV"
+    link = "/cv.pdf"
 
 # Navigation Links
 #   The weight parameter defines the order that the links will appear in.
