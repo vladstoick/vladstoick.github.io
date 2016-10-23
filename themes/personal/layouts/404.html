@@ -1,0 +1,14 @@
+{{ partial "header.html" . }}
+<body>
+  {{ partial "navbar.html" . }}
+
+  <div class="content">
+    <div class="container">
+      <h1 class="text-xs-center p-t-2">404! Page not found</h1>
+      <p class="text-xs-center">
+        Go back to
+        <a href="{{ "/" | relURL }}">homepage</a>
+      </p>
+    </div>
+  </div>
+</body>
