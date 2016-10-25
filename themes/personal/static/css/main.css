@@ -5346,7 +5346,8 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 .about-portrait {
   text-align: center; }
   .about-portrait img {
-    max-width: 200px; }
+    max-width: 200px;
+    border: 5px solid #105B63; }
 
 .about-biography h1 {
   font-size: 3.5em; }
