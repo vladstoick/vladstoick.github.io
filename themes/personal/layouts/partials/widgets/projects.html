@@ -1,5 +1,5 @@
 <div class="container" id="projects">
-  <div class="row m-t-1">
+  <div class="row mt-1">
     <div class="col-md-8 offset-md-4">
       <h2>{{ with .page.Title }}{{ . | markdownify }}{{ end }}</h2>
       {{ range where .root.Data.Pages "Type" "project" }}
@@ -8,7 +8,7 @@
         <p class="card-text">{{ .Content }}</p>
         <p>
           {{ range .Params.tags }}
-            <span class="tag tag-default">{{ .name }}</span>
+            <span class="tag p-tag-dark-red">{{ .name }}</span>
           {{ end }}
         </p>
         <a href="{{ .Params.external_link }}" class="card-link">{{ .Params.external_link_title }}</a>

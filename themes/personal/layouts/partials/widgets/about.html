@@ -3,7 +3,7 @@
     <div class="col-md-4">
       <div class="about-portrait">
         {{ with .root.Site.Params.avatar }}
-        <img src="{{ "/img/" | relURL }}{{ . }}" class="img-circle m-b-1" />
+        <img src="{{ "/img/" | relURL }}{{ . }}" class="rounded-circle mb-1" />
         {{ end }}
         <h1>{{ .root.Site.Params.name }}</h1>
       </div>
@@ -12,7 +12,7 @@
       <ul class="list-unstyled about-social">
         <li>
           <a href="{{ .link }}">
-            <img src="{{ "/svg/" | relURL }}{{ .icon }}" class="p-r-1" />
+            <img src="{{ "/svg/" | relURL }}{{ .icon }}" class="pr-1" />
             {{ .name }}
           </a>
         </li>
@@ -21,10 +21,10 @@
     </div>
     <div class="col-md-8 about-biography">
       {{ .page.Content }}
-      <div class="row m-t-2">
+      <div class="row mt-2">
         {{ with .page.Params.work }}
         <div class="col-md-6">
-          <h3 class="m-b-1">{{ .title | default "Work" | markdownify }}</h3>
+          <h3 class="mb-1">{{ .title | default "Work" | markdownify }}</h3>
           {{ range .positions }}
             <div class="card">
               <div class="card-header">
@@ -33,16 +33,16 @@
               <div class="card-block">
                 <div class="row">
                   <div class="col-xs-2">
-                    <img src="{{ "/svg/" | relURL }}work_icon.svg" class="p-r-1" />
+                    <img src="{{ "/svg/" | relURL }}work_icon.svg" class="pr-1" />
                   </div>
 
                   <div class="col-xs-10">
                   {{ .employee }}
                   </div>
                 </div>
-                <div class="m-t-1">
+                <div class="mt-1">
                   {{ range .tags }}
-                    <span class="tag tag-default">{{ .name }}</span>
+                    <span class="tag p-tag-dark-red">{{ .name }}</span>
                   {{ end }}
                 </div>
               </div>
@@ -53,7 +53,7 @@
 
         {{ with .page.Params.education }}
         <div class="col-md-6">
-          <h3 class="m-b-1">{{ .title | default "Education" | markdownify }}</h3>
+          <h3 class="mb-1">{{ .title | default "Education" | markdownify }}</h3>
           {{ range .courses }}
             <div class="card">
               <div class="card-header">
@@ -72,7 +72,7 @@
                 </div>
 
                 {{ range .achievements }}
-                  <div class="row m-t-1">
+                  <div class="row mt-1">
                     <div class="col-xs-2">
                       <img src="{{ "/svg/" | relURL }}grade_icon.svg" />
                     </div>

@@ -5,7 +5,7 @@ var sass = require('gulp-sass');
 var moduleImporter = require('sass-module-importer');
 
 gulp.task('sass', function (done) {
-  gulp.src('./scss/**/*.scss')
+  gulp.src('./scss/main.scss')
     .pipe(sass({ importer: moduleImporter() }).on('error', sass.logError))
     .pipe(gulp.dest('./static/css'));
   done();
