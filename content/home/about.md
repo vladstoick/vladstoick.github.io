@@ -2,6 +2,7 @@
   draft: false
   date: 2016-04-20T00:00:00
   widget: about
+  weight: 1
   work:
     title: Work
     positions:
@@ -49,9 +50,18 @@
 
 # Biography
 
-I am a second year student at King's College London studying Computer Science with Management.
+I am a third year student at King's College London studying Computer Science with Management.
 In my first year, I have achieved a first grade and I also obtained "Computer Science with Management Prize" for achieving the highest grade from my course.
+In my second yer, I have also achieved a first grade with the highest grade from my course, obtaining the same prize for the second year students.
 
 I have been working as a backend developer at [Lostmy.name](https://lostmy.name)
 for over a year where we have a backend built on the e-commerce platform [Solidus](https://github.com/solidusio/solidus).
-The backend handled over 1,800,000 books sold in over 184 countries.
+I am part of the Core team that handles everything after cart: payments, shipping, tracking shipment and building tools
+for customer support. My most important tasks were:
+
+- Implementing two new payment methods: Klarna & Braintree Cards
+- Implement a shipment tracking system that uses Aftership for tracking packages and Twilio for sending messages to customers all over the world in different languages.
+- Update the backend application from a Solidus 1.* with Rails 4 to a Solidus 2.* with Rails 5
+- Contribute multiple PRs to Solidus ([PRs](https://github.com/solidusio/solidus/pulls?q=is%3Apr+author%3Avladstoick+is%3Aclosed))
+- Implement a taxation system for Australia & EU
+- Lead various projects for increasing speed of our test suite built on RSpec
