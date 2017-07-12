@@ -13,22 +13,21 @@
     
     
     <item>
+      <title></title>
+      <link>http://www.vladstoica.me/home/about/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.vladstoica.me/home/about/</guid>
+      <description>Biography I am a third year student at King&amp;rsquo;s College London studying Computer Science with Management. In my first year, I have achieved a first grade and I also obtained &amp;ldquo;Computer Science with Management Prize&amp;rdquo; for achieving the highest grade from my course. In my second yer, I have also achieved a first grade with the highest grade from my course, obtaining the same prize for the second year students.</description>
+    </item>
+    
+    <item>
       <title>Projects</title>
       <link>http://www.vladstoica.me/home/projects/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       
       <guid>http://www.vladstoica.me/home/projects/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://www.vladstoica.me/home/about/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.vladstoica.me/home/about/</guid>
-      <description>Biography I am a second year student at King&amp;rsquo;s College London studying Computer Science with Management. In my first year, I have achieved a first grade and I also obtained &amp;ldquo;Computer Science with Management Prize&amp;rdquo; for achieving the highest grade from my course.
-I have been working as a backend developer at Lostmy.name for over a year where we have a backend built on the e-commerce platform Solidus. The backend handled over 1,800,000 books sold in over 184 countries.</description>
     </item>
     
   </channel>
