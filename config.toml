@@ -3,6 +3,7 @@ title = "Vlad Stoica"
 copyright = "&copy; Vlad Stoica"
 languageCode = "en-us"
 theme = "personal"
+publishDir = "docs"
 
 # Enable analytics by entering your Google Analytics tracking ID
 googleAnalytics = ""

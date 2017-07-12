@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Vlad Stoica</title>
+    <link>http://www.vladstoica.me/project/</link>
+    <description>Recent content in Projects on Vlad Stoica</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Vlad Stoica</copyright>
+    
+	<atom:link href="http://www.vladstoica.me/project/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>http://www.vladstoica.me/project/carnetul-de-note/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.vladstoica.me/project/carnetul-de-note/</guid>
+      <description>An application I&amp;rsquo;ve built while I was learning to developed Android application. This app allows Romanian students to keep track of their grades and get details about what they need to do in order to achieve their desired overall grade.</description>
+    </item>
+    
+  </channel>
+</rss>
