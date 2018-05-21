@@ -41,7 +41,9 @@ const IndexPage = (props: IndexPageProps) => {
     <div>
       <CentredRow>
         <Avatar
-          imageUrl={"http://www.vladstoica.me/img/portrait.jpg"}
+          imageUrl={
+            "http://gravatar.com/avatar/32ca7438bc506ad3ca9b3d3c2210d5f5?s=400"
+          }
           name={"Vlad Stoica"}
         />
       </CentredRow>
