@@ -32,13 +32,6 @@ const WorkExperienceItem = (props: WorkExperienceItemProps) => (
       location={props.companyName}
       period={props.time}
     />
-    {/* <WorkExperienceHeadline>
-      <WorkExperience>
-        <WorkExperiencePosition>{props.title}</WorkExperiencePosition> at{" "}
-        <span>{props.companyName}</span>
-      </WorkExperience>
-      <WorkPeriod>{props.time}</WorkPeriod>
-    </WorkExperienceHeadline> */}
     <TagList>
       {props.tags.map(tag => <WorkExperienceTag>{tag}</WorkExperienceTag>)}
     </TagList>
@@ -48,12 +41,7 @@ const WorkExperienceItem = (props: WorkExperienceItemProps) => (
 interface WorkExperienceProps {
   workExperience: [
     {
-      node: {
-        companyName: string;
-        time: string;
-        tags: [string];
-        title: string;
-      };
+      node: WorkExperienceItemProps;
     }
   ];
 }

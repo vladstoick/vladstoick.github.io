@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Vlad Stoica',
+    avatar: 'http://gravatar.com/avatar/32ca7438bc506ad3ca9b3d3c2210d5f5?s=400'
   },
   plugins: [
     'gatsby-plugin-react-helmet',

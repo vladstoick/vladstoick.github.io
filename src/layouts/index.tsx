@@ -1,6 +1,7 @@
 import * as React from "react";
 import Helmet from "react-helmet";
-import { Container } from "../components/grid";
+import { Container, CentredRow } from "../components/grid";
+import Avatar from "../components/avatar";
 
 interface LayoutProps {
   children(): React.Component;
@@ -8,6 +9,7 @@ interface LayoutProps {
     site: {
       siteMetadata: {
         title: string;
+        avatar: string;
       };
     };
   };
@@ -15,13 +17,14 @@ interface LayoutProps {
 
 const Layout = (props: LayoutProps) => (
   <div>
-    <Helmet
-      title={props.data.site.siteMetadata.title}
-      meta={[
-        { name: "description", content: "Sample" },
-        { name: "keywords", content: "sample, something" }
-      ]}
-    />
+    <Helmet title={props.data.site.siteMetadata.title} />
+
+    <CentredRow>
+      <Avatar
+        imageUrl={props.data.site.siteMetadata.avatar}
+        name={props.data.site.siteMetadata.title}
+      />
+    </CentredRow>
 
     <Container>{props.children()}</Container>
   </div>
@@ -34,6 +37,7 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        avatar
       }
     }
   }
