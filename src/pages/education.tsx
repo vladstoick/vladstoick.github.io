@@ -1,28 +1,8 @@
 import * as React from "react";
-import Link from "gatsby-link";
-import Avatar from "../components/header/avatar";
-import { CentredRow, Column } from "../components/grid";
-import WorkExperienceList from "../components/work";
 import EducationList from "../components/education";
-
-export interface WorkExperienceItem {
-  companyName: string;
-  time: string;
-  tags: [string];
-  title: string;
-  blurb: string;
-  achievements: [string];
-}
 
 interface IndexPageProps {
   data: {
-    allWorkJson: {
-      edges: [
-        {
-          node: WorkExperienceItem;
-        }
-      ];
-    };
     allEducationJson: {
       edges: [
         {
