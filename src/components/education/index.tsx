@@ -1,8 +1,6 @@
 import * as React from "react";
-import { Row, Column } from "./grid";
 import styled from "styled-components";
-import * as colours from "../utils/colours";
-import WorkEducationHeadline from "./work-education-headline";
+import WorkEducationHeadline from "./../work-education-headline";
 
 interface EducationItemProps {
   institution: string;

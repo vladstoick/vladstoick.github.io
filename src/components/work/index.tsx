@@ -1,9 +1,9 @@
 import * as React from "react";
-import { Row, Column } from "./grid";
+import { Row, Column } from "./../grid";
 import styled from "styled-components";
-import * as colours from "../utils/colours";
-import WorkEducationHeadline from "./work-education-headline";
-import { WorkExperienceItem } from "../pages";
+import * as colours from "../../utils/colours";
+import WorkEducationHeadline from "./../work-education-headline";
+import { WorkExperienceItem } from "../../pages/work";
 
 const WorkExperienceTag = styled.span`
   background-color: ${colours.orange};
