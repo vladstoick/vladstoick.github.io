@@ -1,0 +1,2 @@
+webpackJsonp([0x5fa182c55c5e],{205:function(e,r,n){"use strict";Object.defineProperty(r,"__esModule",{value:!0});var t=n(2),a=n(!function(){var e=new Error('Cannot find module "../components/work"');throw e.code="MODULE_NOT_FOUND",e}()),o=function(e){var r=e.data;return t.createElement(a.default,{workExperience:r.allWorkJson.edges})};r.default=o,r.pageQuery="** extracted graphql fragment **"}});
+//# sourceMappingURL=component---src-pages-work-tsx-cadd96cdbf7e44b9cd75.js.map

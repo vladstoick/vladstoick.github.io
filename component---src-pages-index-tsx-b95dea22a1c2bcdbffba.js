@@ -1,0 +1,2 @@
+webpackJsonp([0xc956abe28b23],{213:function(e,t,a){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r=a(2),n=function(e){return r.createElement("div",{dangerouslySetInnerHTML:{__html:e.data.markdownRemark.html}})};t.default=n,t.pageQuery="** extracted graphql fragment **"}});
+//# sourceMappingURL=component---src-pages-index-tsx-b95dea22a1c2bcdbffba.js.map

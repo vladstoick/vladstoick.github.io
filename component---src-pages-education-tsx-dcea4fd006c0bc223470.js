@@ -1,0 +1,2 @@
+webpackJsonp([0x64646003e77c],{203:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var a=n(2),o=n(!function(){var e=new Error('Cannot find module "../components/education"');throw e.code="MODULE_NOT_FOUND",e}()),r=function(e){var t=e.data;return a.createElement(o.default,{educationList:t.allEducationJson.edges})};t.default=r,t.pageQuery="** extracted graphql fragment **"}});
+//# sourceMappingURL=component---src-pages-education-tsx-dcea4fd006c0bc223470.js.map
