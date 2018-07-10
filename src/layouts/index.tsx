@@ -1,7 +1,11 @@
 import * as React from "react";
 import Helmet from "react-helmet";
 import { Container, CentredRow } from "../components/grid";
-import Avatar from "../components/avatar";
+import Avatar from "../components/header/avatar";
+import Navigation, {
+  NavigationLinkProps
+} from "../components/header/navigation";
+// import * as Link from "gatsby-link";
 
 interface LayoutProps {
   children(): React.Component;
@@ -10,6 +14,7 @@ interface LayoutProps {
       siteMetadata: {
         title: string;
         avatar: string;
+        navigation: NavigationLinkProps[];
       };
     };
   };
@@ -19,14 +24,18 @@ const Layout = (props: LayoutProps) => (
   <div>
     <Helmet title={props.data.site.siteMetadata.title} />
 
-    <CentredRow>
-      <Avatar
-        imageUrl={props.data.site.siteMetadata.avatar}
-        name={props.data.site.siteMetadata.title}
-      />
-    </CentredRow>
+    <Container>
+      <CentredRow>
+        <Avatar
+          imageUrl={props.data.site.siteMetadata.avatar}
+          name={props.data.site.siteMetadata.title}
+        />
+      </CentredRow>
 
-    <Container>{props.children()}</Container>
+      <Navigation links={props.data.site.siteMetadata.navigation} />
+
+      {props.children()}
+    </Container>
   </div>
 );
 
@@ -38,6 +47,10 @@ export const query = graphql`
       siteMetadata {
         title
         avatar
+        navigation {
+          path
+          name
+        }
       }
     }
   }

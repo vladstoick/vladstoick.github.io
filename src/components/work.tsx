@@ -3,6 +3,7 @@ import { Row, Column } from "./grid";
 import styled from "styled-components";
 import * as colours from "../utils/colours";
 import WorkEducationHeadline from "./work-education-headline";
+import { WorkExperienceItem } from "../pages";
 
 const WorkExperienceTag = styled.span`
   background-color: ${colours.orange};
@@ -18,20 +19,29 @@ const TagList = Row.extend`
   margin-bottom: 0.5em;
 `;
 
-interface WorkExperienceItemProps {
-  companyName: string;
-  time: string;
-  tags: [string];
-  title: string;
-}
+const Blurb = styled.blockquote`
+  font-size: 1em;
+`;
 
-const WorkExperienceItem = (props: WorkExperienceItemProps) => (
+const Achievement = styled.li`
+  margin-bottom: 0px;
+`;
+
+const WorkExperienceItem = (props: WorkExperienceItem) => (
   <div>
     <WorkEducationHeadline
       title={props.title}
       location={props.companyName}
       period={props.time}
     />
+    <Blurb>
+      {props.blurb}
+      <ul>
+        {props.achievements.map(achievement => (
+          <Achievement>{achievement}</Achievement>
+        ))}
+      </ul>
+    </Blurb>
     <TagList>
       {props.tags.map(tag => <WorkExperienceTag>{tag}</WorkExperienceTag>)}
     </TagList>
@@ -41,7 +51,7 @@ const WorkExperienceItem = (props: WorkExperienceItemProps) => (
 interface WorkExperienceProps {
   workExperience: [
     {
-      node: WorkExperienceItemProps;
+      node: WorkExperienceItem;
     }
   ];
 }
@@ -56,15 +66,7 @@ const WorkExperienceList = (props: WorkExperienceProps) => (
   <div>
     <h2>💼 Work Experience</h2>
     <List>
-      {props.workExperience.map(we => (
-        <WorkExperienceItem
-          companyName={we.node.companyName}
-          title={we.node.title}
-          key={we.node.companyName}
-          time={we.node.time}
-          tags={we.node.tags}
-        />
-      ))}
+      {props.workExperience.map(we => <WorkExperienceItem {...we.node} />)}
     </List>
   </div>
 );

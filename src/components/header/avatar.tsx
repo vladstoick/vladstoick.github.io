@@ -1,17 +1,16 @@
 import * as React from "react";
 import styled from "styled-components";
-import { Column } from "./grid";
+import { Column } from "../grid";
 
 const AvatarImage = styled.img`
   width: 150px;
   height: 150px;
-  margin: auto;
+  margin: 10px auto;
   border-radius: 75px;
 `;
 
 const AvatarTitle = styled.h1`
-  margin-top: 5px;
-  font-weight: 500;
+  font-weight: bold;
 `;
 
 const CentredColumn = Column.extend`

@@ -1,42 +1,7 @@
 import * as React from "react";
-import Link from "gatsby-link";
-import Avatar from "../components/avatar";
-import { CentredRow, Column } from "../components/grid";
-import WorkExperienceList from "../components/work";
-import EducationList from "../components/education";
+import { Column } from "../components/grid";
 
-interface IndexPageProps {
-  data: {
-    allWorkJson: {
-      edges: [
-        {
-          node: {
-            companyName: string;
-            time: string;
-            tags: [string];
-            title: string;
-          };
-        }
-      ];
-    };
-    allEducationJson: {
-      edges: [
-        {
-          node: {
-            institution: string;
-            time: string;
-            degree: string;
-            awards: [string];
-          };
-        }
-      ];
-    };
-  };
-}
-
-const IndexPage = (props: IndexPageProps) => {
-  let data = props.data;
-
+const IndexPage = () => {
   return (
     <Column>
       <h2>👋 Hi</h2>
@@ -54,35 +19,8 @@ const IndexPage = (props: IndexPageProps) => {
         (or Lostmy.name as it was previously called) as a Backend engineer for
         almost 3 years during my studies.
       </p>
-      <WorkExperienceList workExperience={data.allWorkJson.edges} />
-      <EducationList educationList={data.allEducationJson.edges} />
     </Column>
   );
 };
 
 export default IndexPage;
-
-export const pageQuery = graphql`
-  query IndexPage {
-    allWorkJson(sort: { fields: [order] }) {
-      edges {
-        node {
-          companyName
-          time
-          tags
-          title
-        }
-      }
-    }
-    allEducationJson {
-      edges {
-        node {
-          institution
-          degree
-          time
-          awards
-        }
-      }
-    }
-  }
-`;
