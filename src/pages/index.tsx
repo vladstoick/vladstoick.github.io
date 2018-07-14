@@ -18,7 +18,7 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexPage {
-    markdownRemark {
+    markdownRemark(frontmatter: { title: { eq: "HomepageBlurb" } }) {
       html
     }
   }

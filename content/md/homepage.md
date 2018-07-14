@@ -1,13 +1,12 @@
 ---
-title: "Hi"
+title: "HomepageBlurb"
 ---
 
 ## 👋 Hi
 
-I am a Software Engineer based in London 🇬🇧. I have graduated from
+I am a Software Engineer working at **Facebook London 🇬🇧**. I have graduated from
 **King's College London** (BSc in Computer Science with Management)
-in 2018 with a First degree. I am currently on holiday until August when
-I will start to work at **Facebook London**.
+in 2018 with a First degree and the highest grade from the course.
 
 I have previously worked at [**Wonderbly**](https://wonderbly.com)
 (or Lostmy.name as it was previously called) as a Backend engineer for
