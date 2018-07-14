@@ -9,8 +9,6 @@ with a First Class with Honours in **BSc Computer Science With Management**. Dur
 year of study I have been awarded the _Computer Science with Management Prize_.
 The prize is given by the Department of Informatics for achieving the highest grade from the course.
 
-grade from the course.
-
 My Final Year Project (_Dissertation_) was an automated SQL grading tool
 with partial grading. I have built a Ruby library and a Ruby on Rails
 web application which allow students to submit SQL solutions
