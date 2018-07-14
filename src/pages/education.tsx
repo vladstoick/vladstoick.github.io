@@ -21,22 +21,17 @@ interface IndexPageProps {
 const EducationPage = (props: IndexPageProps) => {
   let data = props.data;
 
-  return <EducationList educationList={data.allEducationJson.edges} />;
+  return (
+    <div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }} />
+  );
 };
 
 export default EducationPage;
 
 export const pageQuery = graphql`
   query EducationPage {
-    allEducationJson {
-      edges {
-        node {
-          institution
-          degree
-          time
-          awards
-        }
-      }
+    markdownRemark(frontmatter: { title: { eq: "EducationBlurb" } }) {
+      html
     }
   }
 `;
