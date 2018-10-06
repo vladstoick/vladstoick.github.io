@@ -4,17 +4,8 @@ import Layout from "../components/layout";
 
 interface IndexPageProps {
   data: {
-    allEducationJson: {
-      edges: [
-        {
-          node: {
-            institution: string;
-            time: string;
-            degree: string;
-            awards: [string];
-          };
-        }
-      ];
+    markdownRemark: {
+      html: string;
     };
   };
 }

@@ -53,7 +53,7 @@ const WorkExperienceItem = (props: WorkExperienceItemType) => (
 );
 
 interface WorkExperienceProps {
-  workExperience: [WorkExperienceItemType];
+  workExperience: WorkExperienceItemType[];
 }
 
 const List = styled.div`

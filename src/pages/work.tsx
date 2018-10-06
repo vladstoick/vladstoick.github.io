@@ -46,12 +46,15 @@ const WorkPage = (props: WorkPageProps) => {
 
   console.log(props);
 
-  const mergedData = data.allWorkJson.edges.map(item => {
-    const relevantMarkdown = data.allMarkdownRemark.edges.find(mdItem => {
-      return mdItem.node.frontmatter.title == item.node.id;
-    });
-    return { ...item.node, ...relevantMarkdown.node };
-  });
+  const mergedData: WorkExperienceItemType[] = data.allWorkJson.edges.map(
+    item => {
+      const relevantMarkdown = data.allMarkdownRemark.edges.find(mdItem => {
+        return mdItem.node.frontmatter.title == item.node.id;
+      });
+
+      return { ...item.node, ...relevantMarkdown.node };
+    }
+  );
 
   return (
     <Layout>
