@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import { Column } from "../grid";
+import { Column } from "../layout/grid";
 
 const AvatarImage = styled.img`
   width: 150px;

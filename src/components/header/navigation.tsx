@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import * as React from "react";
 import styled from "styled-components";
-import { CentredRow } from "../grid";
+import { CentredRow } from "../layout/grid";
 
 export interface INavigationLinkProps {
   path: string;

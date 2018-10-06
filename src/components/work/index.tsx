@@ -2,7 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 import { IWorkExperienceItemType } from "../../pages/work";
 import * as colours from "../../utils/colours";
-import { Row } from "./../grid";
+import { Row } from "../layout/grid";
 import WorkEducationHeadline from "./../work-education-headline";
 
 const WorkExperienceTag = styled.span`

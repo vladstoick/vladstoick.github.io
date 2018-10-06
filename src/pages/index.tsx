@@ -1,6 +1,6 @@
 import { graphql } from "gatsby";
 import * as React from "react";
-import Layout from "../components/layout";
+import PageLayout from "../components/layout/page_layout";
 
 interface IIndexPageProps {
   data: {
@@ -10,15 +10,11 @@ interface IIndexPageProps {
   };
 }
 
-const IndexPage = (props: IIndexPageProps) => {
-  return (
-    <Layout>
-      <div
-        dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
-      />
-    </Layout>
-  );
-};
+const IndexPage = (props: IIndexPageProps) => (
+  <PageLayout>
+    <div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }} />
+  </PageLayout>
+);
 
 export default IndexPage;
 

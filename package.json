@@ -37,6 +37,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public -b master",
+    "lint": "tsc && tslint --project tsconfig.json",
     "format": "prettier --write 'src/**/*.js' 'src/**/*.ts' 'src/**/*.tsx'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

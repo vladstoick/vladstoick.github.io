@@ -1,6 +1,6 @@
 import { graphql } from "gatsby";
 import * as React from "react";
-import Layout from "../components/layout";
+import PageLayout from "../components/layout/page_layout";
 
 interface IEducationPageProps {
   data: {
@@ -12,11 +12,11 @@ interface IEducationPageProps {
 
 const EducationPage = (props: IEducationPageProps) => {
   return (
-    <Layout>
+    <PageLayout>
       <div
         dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
       />
-    </Layout>
+    </PageLayout>
   );
 };
 

@@ -1,6 +1,6 @@
 import { graphql } from "gatsby";
 import * as React from "react";
-import Layout from "../components/layout";
+import PageLayout from "../components/layout/page_layout";
 import WorkExperienceList from "../components/work";
 
 interface IWorkExperienceJson {
@@ -55,9 +55,9 @@ const WorkPage = (props: IWorkPageProps) => {
   );
 
   return (
-    <Layout>
+    <PageLayout>
       <WorkExperienceList workExperience={mergedData} />
-    </Layout>
+    </PageLayout>
   );
 };
 

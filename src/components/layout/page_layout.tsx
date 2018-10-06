@@ -1,11 +1,11 @@
 import { graphql, StaticQuery } from "gatsby";
 import * as React from "react";
 import Helmet from "react-helmet";
+import Avatar from "../header/avatar";
+import Navigation from "../header/navigation";
 import { CentredRow, Container } from "./grid";
-import Avatar from "./header/avatar";
-import Navigation from "./header/navigation";
 
-const Layout = (props: { children: any }) => (
+const PageLayout = (props: { children: React.ReactNode }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -42,4 +42,4 @@ const Layout = (props: { children: any }) => (
   />
 );
 
-export default Layout;
+export default PageLayout;
