@@ -12,11 +12,11 @@ export const Row = styled.div`
   display: flex;
 `;
 
-export const CentredRow = Row.extend`
+export const CentredRow = styled(Row)`
   justify-items: center;
   width: 100%;
 `;
 
-export const Column = Row.extend`
+export const Column = styled(Row)`
   flex-direction: column;
 `;

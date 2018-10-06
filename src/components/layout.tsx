@@ -39,22 +39,6 @@ const Layout = (props: { children: any }) => (
       </>
     )}
   />
-  /* <Helmet title={props.data.site.siteMetadata.title} />
-
-    <Container>
-      <CentredRow>
-        <Avatar
-          imageUrl={props.data.site.siteMetadata.avatar}
-          name={props.data.site.siteMetadata.title}
-        />
-      </CentredRow>
-
-      <Navigation links={props.data.site.siteMetadata.navigation} />
-
-      {props.children}
-    </Container>
-  </div> */
-  // }>
 );
 
 export default Layout;

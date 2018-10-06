@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Row } from "./grid";
 import * as React from "react";
 
-const HeadlineRow = Row.extend`
+const HeadlineRow = styled(Row)`
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;

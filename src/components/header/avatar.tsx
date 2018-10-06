@@ -13,7 +13,7 @@ const AvatarTitle = styled.h1`
   font-weight: bold;
 `;
 
-const CentredColumn = Column.extend`
+const CentredColumn = styled(Column)`
   margin: 0 auto;
 `;
 

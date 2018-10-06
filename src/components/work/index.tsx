@@ -14,7 +14,7 @@ const WorkExperienceTag = styled.span`
   font-size: 0.7em;
 `;
 
-const TagList = Row.extend`
+const TagList = styled(Row)`
   flex-wrap: wrap;
   margin-bottom: 0.5em;
 `;
