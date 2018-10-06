@@ -1,9 +1,9 @@
+import { graphql, StaticQuery } from "gatsby";
 import * as React from "react";
 import Helmet from "react-helmet";
-import { Container, CentredRow } from "./grid";
+import { CentredRow, Container } from "./grid";
 import Avatar from "./header/avatar";
-import Navigation, { NavigationLinkProps } from "./header/navigation";
-import { StaticQuery, graphql } from "gatsby";
+import Navigation from "./header/navigation";
 
 const Layout = (props: { children: any }) => (
   <StaticQuery
@@ -21,6 +21,7 @@ const Layout = (props: { children: any }) => (
         }
       }
     `}
+    // tslint:disable-next-line:jsx-no-lambda
     render={data => (
       <>
         <Helmet title={data.site.siteMetadata.title} />

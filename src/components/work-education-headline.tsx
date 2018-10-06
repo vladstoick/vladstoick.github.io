@@ -1,6 +1,6 @@
+import * as React from "react";
 import styled from "styled-components";
 import { Row } from "./grid";
-import * as React from "react";
 
 const HeadlineRow = styled(Row)`
   justify-content: space-between;

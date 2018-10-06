@@ -1,8 +1,8 @@
-import * as React from "react";
 import { graphql } from "gatsby";
+import * as React from "react";
 import Layout from "../components/layout";
 
-interface IndexPageProps {
+interface IIndexPageProps {
   data: {
     markdownRemark: {
       html: string;
@@ -10,7 +10,7 @@ interface IndexPageProps {
   };
 }
 
-const IndexPage = (props: IndexPageProps) => {
+const IndexPage = (props: IIndexPageProps) => {
   return (
     <Layout>
       <div

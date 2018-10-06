@@ -1,9 +1,9 @@
-import * as React from "react";
 import { graphql } from "gatsby";
-import WorkExperienceList from "../components/work";
+import * as React from "react";
 import Layout from "../components/layout";
+import WorkExperienceList from "../components/work";
 
-interface WorkExperienceJson {
+interface IWorkExperienceJson {
   companyName: string;
   time: string;
   tags: [string];
@@ -11,45 +11,43 @@ interface WorkExperienceJson {
   id: string;
 }
 
-interface WorkExperienceMarkdown {
+interface IWorkExperienceMarkdown {
   html: string;
   frontmatter: {
     title: string;
   };
 }
 
-export interface WorkExperienceItemType
-  extends WorkExperienceJson,
-    WorkExperienceMarkdown {}
+export interface IWorkExperienceItemType
+  extends IWorkExperienceJson,
+    IWorkExperienceMarkdown {}
 
-interface WorkPageProps {
+interface IWorkPageProps {
   data: {
     allWorkJson: {
       edges: [
         {
-          node: WorkExperienceJson;
+          node: IWorkExperienceJson;
         }
       ];
     };
     allMarkdownRemark: {
       edges: [
         {
-          node: WorkExperienceMarkdown;
+          node: IWorkExperienceMarkdown;
         }
       ];
     };
   };
 }
 
-const WorkPage = (props: WorkPageProps) => {
-  let data = props.data;
+const WorkPage = (props: IWorkPageProps) => {
+  const data = props.data;
 
-  console.log(props);
-
-  const mergedData: WorkExperienceItemType[] = data.allWorkJson.edges.map(
+  const mergedData: IWorkExperienceItemType[] = data.allWorkJson.edges.map(
     item => {
       const relevantMarkdown = data.allMarkdownRemark.edges.find(mdItem => {
-        return mdItem.node.frontmatter.title == item.node.id;
+        return mdItem.node.frontmatter.title === item.node.id;
       });
 
       return { ...item.node, ...relevantMarkdown.node };

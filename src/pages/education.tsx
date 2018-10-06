@@ -1,8 +1,8 @@
-import * as React from "react";
 import { graphql } from "gatsby";
+import * as React from "react";
 import Layout from "../components/layout";
 
-interface IndexPageProps {
+interface IEducationPageProps {
   data: {
     markdownRemark: {
       html: string;
@@ -10,9 +10,7 @@ interface IndexPageProps {
   };
 }
 
-const EducationPage = (props: IndexPageProps) => {
-  let data = props.data;
-
+const EducationPage = (props: IEducationPageProps) => {
   return (
     <Layout>
       <div

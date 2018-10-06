@@ -17,12 +17,12 @@ const CentredColumn = styled(Column)`
   margin: 0 auto;
 `;
 
-interface AvatarProps {
+interface IAvatarProps {
   imageUrl: string;
   name: string;
 }
 
-const Avatar = (props: AvatarProps) => (
+const Avatar = (props: IAvatarProps) => (
   <CentredColumn>
     <AvatarImage src={props.imageUrl} />
     <AvatarTitle>{props.name}</AvatarTitle>

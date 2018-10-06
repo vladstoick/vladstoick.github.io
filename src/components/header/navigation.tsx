@@ -1,15 +1,15 @@
-import * as React from "react";
-import { CentredRow, Row } from "../grid";
-import styled from "styled-components";
 import { Link } from "gatsby";
+import * as React from "react";
+import styled from "styled-components";
+import { CentredRow } from "../grid";
 
-export interface NavigationLinkProps {
+export interface INavigationLinkProps {
   path: string;
   name: string;
 }
 
-interface NavigationProps {
-  links: NavigationLinkProps[];
+interface INavigationProps {
+  links: INavigationLinkProps[];
 }
 
 const NavigationList = styled.ul`
@@ -39,16 +39,18 @@ const StyledLink = styled(Link).attrs({
   }
 `;
 
-const NavigationLink = (props: NavigationLinkProps) => (
+const NavigationLink = (props: INavigationLinkProps) => (
   <NavigationItem>
     <StyledLink to={props.path}>{props.name}</StyledLink>
   </NavigationItem>
 );
 
-const Navigation = (props: NavigationProps) => (
+const Navigation = (props: INavigationProps) => (
   <CentredRow>
     <NavigationList>
-      {props.links.map(link => <NavigationLink {...link} key={link.path} />)}
+      {props.links.map(link => (
+        <NavigationLink {...link} key={link.path} />
+      ))}
     </NavigationList>
   </CentredRow>
 );

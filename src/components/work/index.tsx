@@ -1,9 +1,9 @@
 import * as React from "react";
-import { Row, Column } from "./../grid";
 import styled from "styled-components";
+import { IWorkExperienceItemType } from "../../pages/work";
 import * as colours from "../../utils/colours";
+import { Row } from "./../grid";
 import WorkEducationHeadline from "./../work-education-headline";
-import { WorkExperienceItemType } from "../../pages/work";
 
 const WorkExperienceTag = styled.span`
   background-color: ${colours.orange};
@@ -30,11 +30,7 @@ const Blurb = styled.blockquote`
   }
 `;
 
-const Achievement = styled.li`
-  margin-bottom: 0px;
-`;
-
-const WorkExperienceItem = (props: WorkExperienceItemType) => (
+const WorkExperienceItem = (props: IWorkExperienceItemType) => (
   <div key={props.id}>
     <WorkEducationHeadline
       title={props.title}
@@ -52,8 +48,8 @@ const WorkExperienceItem = (props: WorkExperienceItemType) => (
   </div>
 );
 
-interface WorkExperienceProps {
-  workExperience: WorkExperienceItemType[];
+interface IWorkExperienceProps {
+  workExperience: IWorkExperienceItemType[];
 }
 
 const List = styled.div`
@@ -62,7 +58,7 @@ const List = styled.div`
   }
 `;
 
-const WorkExperienceList = (props: WorkExperienceProps) => (
+const WorkExperienceList = (props: IWorkExperienceProps) => (
   <div>
     <h2>💼 Work Experience</h2>
     <List>
