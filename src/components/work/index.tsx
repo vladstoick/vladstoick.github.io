@@ -21,6 +21,13 @@ const TagList = Row.extend`
 
 const Blurb = styled.blockquote`
   font-size: 1em;
+  p {
+    margin-bottom: 0.5em;
+  }
+
+  li {
+    margin-bottom: 0px;
+  }
 `;
 
 const Achievement = styled.li`
@@ -36,11 +43,7 @@ const WorkExperienceItem = (props: WorkExperienceItem) => (
     />
     <Blurb>
       {props.blurb}
-      <ul>
-        {props.achievements.map(achievement => (
-          <Achievement>{achievement}</Achievement>
-        ))}
-      </ul>
+      <div dangerouslySetInnerHTML={{ __html: props.html }} />
     </Blurb>
     <TagList>
       {props.tags.map(tag => <WorkExperienceTag>{tag}</WorkExperienceTag>)}
@@ -49,11 +52,7 @@ const WorkExperienceItem = (props: WorkExperienceItem) => (
 );
 
 interface WorkExperienceProps {
-  workExperience: [
-    {
-      node: WorkExperienceItem;
-    }
-  ];
+  workExperience: [WorkExperienceItem];
 }
 
 const List = styled.div`
@@ -66,7 +65,9 @@ const WorkExperienceList = (props: WorkExperienceProps) => (
   <div>
     <h2>💼 Work Experience</h2>
     <List>
-      {props.workExperience.map(we => <WorkExperienceItem {...we.node} />)}
+      {props.workExperience.map(we => (
+        <WorkExperienceItem {...we} key={we.id} />
+      ))}
     </List>
   </div>
 );

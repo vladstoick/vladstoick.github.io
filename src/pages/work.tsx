@@ -1,31 +1,57 @@
 import * as React from "react";
 import WorkExperienceList from "../components/work";
 
-export interface WorkExperienceItem {
+interface WorkExperienceJson {
   companyName: string;
   time: string;
   tags: [string];
   title: string;
-  blurb: string;
-  achievements: [string];
+  id: string;
 }
 
-interface IndexPageProps {
+interface WorkExperienceMarkdown {
+  html: string;
+  frontmatter: {
+    title: string;
+  };
+}
+
+export interface WorkExperienceItem
+  extends WorkExperienceJson,
+    WorkExperienceMarkdown {}
+
+interface WorkPageProps {
   data: {
     allWorkJson: {
       edges: [
         {
-          node: WorkExperienceItem;
+          node: WorkExperienceJson;
+        }
+      ];
+    };
+    allMarkdownRemark: {
+      edges: [
+        {
+          node: WorkExperienceMarkdown;
         }
       ];
     };
   };
 }
 
-const WorkPage = (props: IndexPageProps) => {
+const WorkPage = (props: WorkPageProps) => {
   let data = props.data;
 
-  return <WorkExperienceList workExperience={data.allWorkJson.edges} />;
+  console.log(props);
+
+  const mergedData = data.allWorkJson.edges.map(item => {
+    const relevantMarkdown = data.allMarkdownRemark.edges.find(mdItem => {
+      return mdItem.node.frontmatter.title == item.node.id;
+    });
+    return { ...item.node, ...relevantMarkdown.node };
+  });
+
+  return <WorkExperienceList workExperience={mergedData} />;
 };
 
 export default WorkPage;
@@ -39,8 +65,18 @@ export const pageQuery = graphql`
           time
           tags
           title
-          blurb
-          achievements
+          id
+        }
+      }
+    }
+
+    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/.*work.*/" } }) {
+      edges {
+        node {
+          html
+          frontmatter {
+            title
+          }
         }
       }
     }
