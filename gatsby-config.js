@@ -6,10 +6,10 @@ module.exports = {
       path: "/",
       name: "home",
     }, {
-      path: "/work",
+      path: "/work/",
       name: "work",
     }, {
-      path: "/education",
+      path: "/education/",
       name: "education",
     }]
   },

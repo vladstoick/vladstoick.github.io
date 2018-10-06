@@ -1,5 +1,7 @@
 import * as React from "react";
+import { graphql } from "gatsby";
 import WorkExperienceList from "../components/work";
+import Layout from "../components/layout";
 
 interface WorkExperienceJson {
   companyName: string;
@@ -16,7 +18,7 @@ interface WorkExperienceMarkdown {
   };
 }
 
-export interface WorkExperienceItem
+export interface WorkExperienceItemType
   extends WorkExperienceJson,
     WorkExperienceMarkdown {}
 
@@ -51,7 +53,11 @@ const WorkPage = (props: WorkPageProps) => {
     return { ...item.node, ...relevantMarkdown.node };
   });
 
-  return <WorkExperienceList workExperience={mergedData} />;
+  return (
+    <Layout>
+      <WorkExperienceList workExperience={mergedData} />
+    </Layout>
+  );
 };
 
 export default WorkPage;

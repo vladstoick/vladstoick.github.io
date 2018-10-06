@@ -3,7 +3,7 @@ import { Row, Column } from "./../grid";
 import styled from "styled-components";
 import * as colours from "../../utils/colours";
 import WorkEducationHeadline from "./../work-education-headline";
-import { WorkExperienceItem } from "../../pages/work";
+import { WorkExperienceItemType } from "../../pages/work";
 
 const WorkExperienceTag = styled.span`
   background-color: ${colours.orange};
@@ -34,25 +34,26 @@ const Achievement = styled.li`
   margin-bottom: 0px;
 `;
 
-const WorkExperienceItem = (props: WorkExperienceItem) => (
-  <div>
+const WorkExperienceItem = (props: WorkExperienceItemType) => (
+  <div key={props.id}>
     <WorkEducationHeadline
       title={props.title}
       location={props.companyName}
       period={props.time}
     />
     <Blurb>
-      {props.blurb}
       <div dangerouslySetInnerHTML={{ __html: props.html }} />
     </Blurb>
     <TagList>
-      {props.tags.map(tag => <WorkExperienceTag>{tag}</WorkExperienceTag>)}
+      {props.tags.map(tag => (
+        <WorkExperienceTag key={tag}>{tag}</WorkExperienceTag>
+      ))}
     </TagList>
   </div>
 );
 
 interface WorkExperienceProps {
-  workExperience: [WorkExperienceItem];
+  workExperience: [WorkExperienceItemType];
 }
 
 const List = styled.div`

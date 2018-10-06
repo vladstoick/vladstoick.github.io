@@ -1,5 +1,6 @@
 import * as React from "react";
-import EducationList from "../components/education";
+import { graphql } from "gatsby";
+import Layout from "../components/layout";
 
 interface IndexPageProps {
   data: {
@@ -22,7 +23,11 @@ const EducationPage = (props: IndexPageProps) => {
   let data = props.data;
 
   return (
-    <div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }} />
+    <Layout>
+      <div
+        dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
+      />
+    </Layout>
   );
 };
 

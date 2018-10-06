@@ -1,12 +1,11 @@
 import * as React from "react";
 import { CentredRow, Row } from "../grid";
 import styled from "styled-components";
-import Link from "gatsby-link";
+import { Link } from "gatsby";
 
 export interface NavigationLinkProps {
   path: string;
   name: string;
-  active: boolean;
 }
 
 interface NavigationProps {
@@ -42,9 +41,7 @@ const StyledLink = styled(Link).attrs({
 
 const NavigationLink = (props: NavigationLinkProps) => (
   <NavigationItem>
-    <StyledLink to={props.path} exact>
-      {props.name}
-    </StyledLink>
+    <StyledLink to={props.path}>{props.name}</StyledLink>
   </NavigationItem>
 );
 

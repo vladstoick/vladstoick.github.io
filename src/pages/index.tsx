@@ -1,4 +1,6 @@
 import * as React from "react";
+import { graphql } from "gatsby";
+import Layout from "../components/layout";
 
 interface IndexPageProps {
   data: {
@@ -10,7 +12,11 @@ interface IndexPageProps {
 
 const IndexPage = (props: IndexPageProps) => {
   return (
-    <div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }} />
+    <Layout>
+      <div
+        dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
+      />
+    </Layout>
   );
 };
 
