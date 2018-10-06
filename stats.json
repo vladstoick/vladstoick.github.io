@@ -1,20 +1,20 @@
 {
   "assetsByChunkName": {
     "component---src-layouts-index-tsx": [
-      "component---src-layouts-index-tsx-db2db86159a902b6b51a.js",
-      "component---src-layouts-index-tsx-db2db86159a902b6b51a.js.map"
+      "component---src-layouts-index-tsx-5072e6f722f5fdbacf10.js",
+      "component---src-layouts-index-tsx-5072e6f722f5fdbacf10.js.map"
     ],
     "path---work": [
-      "path---work-d99dd3c0b4b329785680.js",
-      "path---work-d99dd3c0b4b329785680.js.map"
+      "path---work-26e1e645be7a2712bb00.js",
+      "path---work-26e1e645be7a2712bb00.js.map"
     ],
     "path---": [
       "path----4c014111298ff6cca2a6.js",
       "path----4c014111298ff6cca2a6.js.map"
     ],
     "component---src-pages-work-tsx": [
-      "component---src-pages-work-tsx-d9fc6742f3b288731765.js",
-      "component---src-pages-work-tsx-d9fc6742f3b288731765.js.map"
+      "component---src-pages-work-tsx-7b94beb331037aa992a8.js",
+      "component---src-pages-work-tsx-7b94beb331037aa992a8.js.map"
     ],
     "path---education": [
       "path---education-ef7dc765adf07d26cbd0.js",
@@ -33,8 +33,8 @@
       "component---src-pages-404-js-cf325d2e9bf981eec2f6.js.map"
     ],
     "commons": [
-      "commons-ade5f0ef9e9a695490fb.js",
-      "commons-ade5f0ef9e9a695490fb.js.map"
+      "commons-883df42829252f369741.js",
+      "commons-883df42829252f369741.js.map"
     ],
     "path---404-html": [
       "path---404-html-a0e39f21c11f6a62c5ab.js",
@@ -45,8 +45,8 @@
       "component---src-pages-index-tsx-b95dea22a1c2bcdbffba.js.map"
     ],
     "app": [
-      "app-040441ea7c22ac5e4322.js",
-      "app-040441ea7c22ac5e4322.js.map"
+      "app-2da0c56f815a892c8761.js",
+      "app-2da0c56f815a892c8761.js.map"
     ],
     "path---404": [
       "path---404-a0e39f21c11f6a62c5ab.js",
