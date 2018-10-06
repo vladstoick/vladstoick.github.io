@@ -1,8 +1,0 @@
-{
-  "id": "facebook",
-  "companyName": "Facebook",
-  "title": "Software Engineer",
-  "order": 1,
-  "time": "August 2018 - present",
-  "tags": ["PHP (Hack)", "React", "Relay", "React Native", "GraphQL", "IDP"]
-}
