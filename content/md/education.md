@@ -5,7 +5,7 @@ title: "EducationBlurb"
 ### **King's College London** (2015-2018)
 
 I studied at King's College London from 2015-2018 where I graduated
-with a First Class with Honours in **BSc Computer Science With Management**. During each
+with First Class with Honours in **BSc Computer Science With Management**. During each
 year of study I have been awarded the _Computer Science with Management Prize_.
 The prize is given by the Department of Informatics for achieving the highest grade from the course.
 
