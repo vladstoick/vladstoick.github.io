@@ -16,6 +16,7 @@ const NavigationList = styled.ul`
   list-style: none;
   display: flex;
   margin: 0 auto;
+  padding: 0;
 `;
 
 const NavigationItem = styled.li`
