@@ -1,7 +1,8 @@
+// @flow strict
 import { graphql } from "gatsby";
-import * as React from "react";
+import React from "react";
 import PageLayout from "../components/layout/page_layout";
-import WorkExperienceList from "../components/work";
+import WorkExperienceList from "../components/work/work_experience_list";
 
 type WorkExperienceJson = {
   companyName: string,
@@ -18,7 +19,7 @@ type WorkExperienceMarkdown = {
   }
 };
 
-export type IWorkExperienceItemType = WorkExperienceJson &
+export type WorkExperienceItemType = WorkExperienceJson &
   WorkExperienceMarkdown;
 
 type WorkPageProps = {
@@ -26,28 +27,32 @@ type WorkPageProps = {
     allWorkJson: {
       edges: [
         {
-          node: IWorkExperienceJson
+          node: WorkExperienceJson
         }
       ]
     },
     allMarkdownRemark: {
       edges: [
         {
-          node: IWorkExperienceMarkdown
+          node: WorkExperienceMarkdown
         }
       ]
     }
   }
 };
 
-const WorkPage = (props: IWorkPageProps) => {
+const WorkPage = (props: WorkPageProps) => {
   const data = props.data;
 
-  const mergedData: IWorkExperienceItemType[] = data.allWorkJson.edges.map(
+  const mergedData: WorkExperienceItemType[] = data.allWorkJson.edges.map(
     item => {
       const relevantMarkdown = data.allMarkdownRemark.edges.find(mdItem => {
         return mdItem.node.frontmatter.title === item.node.id;
       });
+
+      if (relevantMarkdown == null) {
+        throw "Could not find markdown for json";
+      }
 
       return { ...item.node, ...relevantMarkdown.node };
     }

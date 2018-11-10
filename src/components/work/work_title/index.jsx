@@ -1,3 +1,4 @@
+// @flow strict
 import * as React from "react";
 import { Row } from "../../layout/grid";
 import styles from "./style.module.scss";

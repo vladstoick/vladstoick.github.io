@@ -1,3 +1,4 @@
+// @flow strict
 import { Link } from "gatsby";
 import * as React from "react";
 import { CentredRow } from "../../layout/grid";

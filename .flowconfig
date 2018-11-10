@@ -1,22 +1,15 @@
 [ignore]
-.*/test/.*
-.*/node_modules/documentation/.*
-.*/node_modules/emotion/.*
-.*/node_modules/fbjs/.*
-.*/node_modules/jss/.*
-.*/node_modules/preact/.*
-.*/node_modules/react-side-effect/.*
-.*/node_modules/styled-components/.*
-.*/node_modules/typography/.*
-.*/www/.*
-.*/examples/.*
 
 [include]
+src
 
 [libs]
 
 [lints]
 
 [options]
+module.file_ext=.js
+module.file_ext=.jsx
+module.file_ext=.scss
 
 [strict]

@@ -1,4 +1,5 @@
-import * as React from "react";
+//@flow strict
+import React from "react";
 import styles from "./style.module.scss";
 
 type IAvatarProps = {

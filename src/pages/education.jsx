@@ -1,5 +1,6 @@
+// @flow strict
 import { graphql } from "gatsby";
-import * as React from "react";
+import React from "react";
 import PageLayout from "../components/layout/page_layout";
 
 type EducationPageProps = {

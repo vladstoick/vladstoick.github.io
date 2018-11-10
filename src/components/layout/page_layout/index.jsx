@@ -1,3 +1,4 @@
+//@flow strict
 import { graphql, StaticQuery } from "gatsby";
 import * as React from "react";
 import Helmet from "react-helmet";
@@ -6,7 +7,7 @@ import { CentredRow, Container } from "../grid";
 import Avatar from "../../header/avatar";
 import "./global_styles.scss";
 
-const PageLayout = (props: { children: React.ReactNode }) => (
+const PageLayout = (props: { children: React.Node }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
