@@ -11,7 +11,7 @@ type WorkEducationHeadlineProps = {
 
 const WorkTitle = (props: WorkEducationHeadlineProps) => (
   <Row className={styles.headlineRow}>
-    <p className={styles.posiition}>
+    <p className={styles.position}>
       <span className={styles.positionTitle}>{props.title}</span> at{" "}
       <span>{props.location}</span>
     </p>
