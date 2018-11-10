@@ -2,15 +2,15 @@ import { graphql } from "gatsby";
 import * as React from "react";
 import PageLayout from "../components/layout/page_layout";
 
-interface IEducationPageProps {
+type EducationPageProps = {
   data: {
     markdownRemark: {
-      html: string;
-    };
-  };
-}
+      html: string
+    }
+  }
+};
 
-const EducationPage = (props: IEducationPageProps) => {
+const EducationPage = (props: EducationPageProps) => {
   return (
     <PageLayout>
       <div

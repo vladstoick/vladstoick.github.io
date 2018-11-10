@@ -18,9 +18,10 @@ module.exports = {
     ]
   },
   plugins: [
-    "gatsby-plugin-react-helmet",
-    `gatsby-plugin-typescript`,
-    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-flow`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-eslint`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -36,6 +37,6 @@ module.exports = {
       }
     },
     `gatsby-transformer-remark`,
-    "gatsby-transformer-json"
+    `gatsby-transformer-json`
   ]
 };

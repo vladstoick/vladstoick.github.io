@@ -1,0 +1,17 @@
+.headlineRow {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  @media (max-width: 900px) {
+    margin-bottom: 5px;
+  }
+}
+
+.position {
+  margin-bottom: 0.1em;
+  font-size: 1.2em;
+}
+
+.positionTitle {
+  font-weight: bold;
+}

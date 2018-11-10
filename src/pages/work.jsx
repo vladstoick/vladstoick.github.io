@@ -3,43 +3,42 @@ import * as React from "react";
 import PageLayout from "../components/layout/page_layout";
 import WorkExperienceList from "../components/work";
 
-interface IWorkExperienceJson {
-  companyName: string;
-  time: string;
-  tags: [string];
-  title: string;
-  id: string;
-}
+type WorkExperienceJson = {
+  companyName: string,
+  time: string,
+  tags: [string],
+  title: string,
+  id: string
+};
 
-interface IWorkExperienceMarkdown {
-  html: string;
+type WorkExperienceMarkdown = {
+  html: string,
   frontmatter: {
-    title: string;
-  };
-}
+    title: string
+  }
+};
 
-export interface IWorkExperienceItemType
-  extends IWorkExperienceJson,
-    IWorkExperienceMarkdown {}
+export type IWorkExperienceItemType = WorkExperienceJson &
+  WorkExperienceMarkdown;
 
-interface IWorkPageProps {
+type WorkPageProps = {
   data: {
     allWorkJson: {
       edges: [
         {
-          node: IWorkExperienceJson;
+          node: IWorkExperienceJson
         }
-      ];
-    };
+      ]
+    },
     allMarkdownRemark: {
       edges: [
         {
-          node: IWorkExperienceMarkdown;
+          node: IWorkExperienceMarkdown
         }
-      ];
-    };
-  };
-}
+      ]
+    }
+  }
+};
 
 const WorkPage = (props: IWorkPageProps) => {
   const data = props.data;

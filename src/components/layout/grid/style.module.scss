@@ -1,0 +1,22 @@
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  @media (max-width: 900px) {
+    padding: 10px;
+  }
+}
+
+.row {
+  display: flex;
+}
+
+.centeredRow {
+  display: flex;
+  justify-items: center;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}

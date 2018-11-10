@@ -1,0 +1,25 @@
+.navigationContainer {
+  list-style: none;
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.navigationLink {
+  margin: 0 10px;
+  .link {
+    color: lightgrey;
+    font-weight: bold;
+
+    &:hover {
+      color: lightblue;
+      text-decoration: none;
+      border-bottom: 2px solid lightblue;
+    }
+
+    &.active {
+      color: black;
+      border-bottom: 2px solid grey;
+    }
+  }
+}
