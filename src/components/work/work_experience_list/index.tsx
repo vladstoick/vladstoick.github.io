@@ -1,8 +1,7 @@
-// @flow strict
 import * as React from "react";
+import styled from "styled-components";
 import { IWorkExperienceItemType } from "../../../pages/work";
 import WorkExperience from "../work_experience";
-import styled from "styled-components";
 
 const List = styled.div`
   & > div:not(:first-child) {

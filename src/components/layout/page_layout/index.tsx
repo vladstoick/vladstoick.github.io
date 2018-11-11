@@ -4,7 +4,41 @@ import Helmet from "react-helmet";
 import Navigation from "../../header/navigation";
 import { CentredRow, Container } from "../grid";
 import Avatar from "../../header/avatar";
-import "./global_styles.scss";
+import { createGlobalStyle } from "styled-components";
+
+const GlobalStyle = createGlobalStyle`
+  @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,400i,700");
+
+  html {
+    font: 112.5%/1.56 "Source Sans Pro", sans-serif;
+    /* font-family: 'Source Sans Pro', sans-serif;
+      font-size: 18px; */
+    font-weight: 400;
+    margin: 0;
+    color: hsla(0, 0%, 0%, 0.7);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-weight: 200;
+    margin: 0;
+    padding: 0;
+    color: hsla(0, 0%, 0%, 0.85);
+  }
+
+  a {
+    text-decoration: none;
+    color: #419eda;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    color: #2a6496;
+  }
+`;
 
 const PageLayout = (props: { children: React.ReactChild }) => (
   <StaticQuery
@@ -24,6 +58,7 @@ const PageLayout = (props: { children: React.ReactChild }) => (
     `}
     render={data => (
       <>
+        <GlobalStyle />
         <Helmet title={data.site.siteMetadata.title} />
         <Container>
           <CentredRow>
