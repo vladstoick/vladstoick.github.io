@@ -20,6 +20,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-flow`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-eslint`,
     `gatsby-plugin-typescript`,
