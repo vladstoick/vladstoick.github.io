@@ -1,17 +1,16 @@
-// @flow strict
 import { graphql } from "gatsby";
 import React from "react";
 import PageLayout from "../components/layout/page_layout";
 
-type IndexPageProps = {
+interface IIndexPageProps {
   data: {
     markdownRemark: {
-      html: string
-    }
-  }
-};
+      html: string;
+    };
+  };
+}
 
-const IndexPage = (props: IndexPageProps) => (
+const IndexPage = (props: IIndexPageProps) => (
   <PageLayout>
     <div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }} />
   </PageLayout>

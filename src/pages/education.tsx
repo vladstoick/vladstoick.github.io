@@ -1,17 +1,16 @@
-// @flow strict
 import { graphql } from "gatsby";
 import React from "react";
 import PageLayout from "../components/layout/page_layout";
 
-type EducationPageProps = {
+interface IEducationPageProps {
   data: {
     markdownRemark: {
-      html: string
-    }
-  }
-};
+      html: string;
+    };
+  };
+}
 
-const EducationPage = (props: EducationPageProps) => {
+const EducationPage = (props: IEducationPageProps) => {
   return (
     <PageLayout>
       <div

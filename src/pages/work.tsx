@@ -1,50 +1,50 @@
-// @flow strict
 import { graphql } from "gatsby";
 import React from "react";
 import PageLayout from "../components/layout/page_layout";
 import WorkExperienceList from "../components/work/work_experience_list";
 
-type WorkExperienceJson = {
-  companyName: string,
-  time: string,
-  tags: [string],
-  title: string,
-  id: string
-};
+interface IWorkExperienceJson {
+  companyName: string;
+  time: string;
+  tags: [string];
+  title: string;
+  id: string;
+}
 
-type WorkExperienceMarkdown = {
-  html: string,
+interface IWorkExperienceMarkdown {
+  html: string;
   frontmatter: {
-    title: string
-  }
-};
+    title: string;
+  };
+}
 
-export type WorkExperienceItemType = WorkExperienceJson &
-  WorkExperienceMarkdown;
+export interface IWorkExperienceItemType
+  extends IWorkExperienceJson,
+    IWorkExperienceMarkdown {}
 
-type WorkPageProps = {
+interface WorkPageProps {
   data: {
     allWorkJson: {
       edges: [
         {
-          node: WorkExperienceJson
+          node: IWorkExperienceJson;
         }
-      ]
-    },
+      ];
+    };
     allMarkdownRemark: {
       edges: [
         {
-          node: WorkExperienceMarkdown
+          node: IWorkExperienceMarkdown;
         }
-      ]
-    }
-  }
-};
+      ];
+    };
+  };
+}
 
 const WorkPage = (props: WorkPageProps) => {
   const data = props.data;
 
-  const mergedData: WorkExperienceItemType[] = data.allWorkJson.edges.map(
+  const mergedData: IWorkExperienceItemType[] = data.allWorkJson.edges.map(
     item => {
       const relevantMarkdown = data.allMarkdownRemark.edges.find(mdItem => {
         return mdItem.node.frontmatter.title === item.node.id;
