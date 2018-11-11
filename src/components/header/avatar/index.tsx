@@ -24,7 +24,7 @@ const AvatarTitle = styled.h1`
 const Avatar = (props: IAvatarProps) => (
   <AvatarContainer>
     <AvatarImage src={props.imageUrl} />
-    <h1>{props.name}</h1>
+    <AvatarTitle>{props.name}</AvatarTitle>
   </AvatarContainer>
 );
 
