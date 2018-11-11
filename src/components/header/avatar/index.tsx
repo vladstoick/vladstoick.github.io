@@ -1,4 +1,5 @@
 import * as React from "react";
+import StyledText from "../../text";
 import styled from "styled-components";
 
 interface IAvatarProps {
@@ -17,14 +18,12 @@ const AvatarImage = styled.img`
   border-radius: 75px;
 `;
 
-const AvatarTitle = styled.h1`
-  font-weight: bold;
-`;
-
 const Avatar = (props: IAvatarProps) => (
   <AvatarContainer>
     <AvatarImage src={props.imageUrl} />
-    <AvatarTitle>{props.name}</AvatarTitle>
+    <StyledText type="h1" fontWeight="bold">
+      {props.name}
+    </StyledText>
   </AvatarContainer>
 );
 

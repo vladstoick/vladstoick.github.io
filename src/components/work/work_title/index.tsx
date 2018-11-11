@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Row } from "../../layout/grid";
 import styled from "styled-components";
+import StyledText from "../../text";
 
 type WorkEducationHeadlineProps = {
   title: string;
@@ -17,26 +18,17 @@ const HeadlineRow = styled(Row)`
   }
 `;
 
-const Position = styled.p`
-  margin-bottom: 0.1em;
-  font-size: 1.2em;
-`;
-
-const PositionTitle = styled.span`
-  font-weight: bold;
-`;
-
-const Period = styled.span`
-  color: gray;
-`;
-
 const WorkTitle = (props: WorkEducationHeadlineProps) => (
   <HeadlineRow>
-    <Position>
-      <PositionTitle>{props.title}</PositionTitle> at{" "}
-      <span>{props.location}</span>
-    </Position>
-    <Period>{props.period}</Period>
+    <StyledText type="p">
+      <StyledText type="span" fontWeight="bold">
+        {props.title}
+      </StyledText>{" "}
+      at <StyledText type="span">{props.location}</StyledText>
+    </StyledText>
+    <StyledText type="span" color="gray">
+      {props.period}
+    </StyledText>
   </HeadlineRow>
 );
 

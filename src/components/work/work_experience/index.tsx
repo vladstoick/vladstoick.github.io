@@ -1,7 +1,8 @@
-import React from "react";
+import * as React from "react";
 import WorkTitle from "../work_title";
 import { IWorkExperienceItemType } from "../../../pages/work";
 import styled from "styled-components";
+import StyledText from "../../text";
 
 const Blurb = styled.blockquote`
   margin: 0em 0em 1em 0em;
@@ -23,7 +24,7 @@ const TagList = styled.div`
   margin-bottom: 0.5em;
 `;
 
-const Tag = styled.span`
+const Tag = styled(StyledText)`
   background-color: #e37b40;
   color: white;
   margin: 2px 5px;
@@ -44,7 +45,9 @@ const WorkExperience = (props: IWorkExperienceItemType) => (
     </Blurb>
     <TagList>
       {props.tags.map(tag => (
-        <Tag key={tag}>{tag}</Tag>
+        <Tag key={tag} type="span">
+          {tag}
+        </Tag>
       ))}
     </TagList>
   </div>

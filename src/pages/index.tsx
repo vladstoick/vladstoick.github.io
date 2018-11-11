@@ -1,5 +1,5 @@
 import { graphql } from "gatsby";
-import React from "react";
+import * as React from "react";
 import PageLayout from "../components/layout/page_layout";
 
 interface IIndexPageProps {

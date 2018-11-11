@@ -2,6 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 import { IWorkExperienceItemType } from "../../../pages/work";
 import WorkExperience from "../work_experience";
+import StyledText from "../../text";
 
 const List = styled.div`
   & > div:not(:first-child) {
@@ -15,7 +16,7 @@ interface IWorkExperienceProps {
 
 const WorkExperienceList = (props: IWorkExperienceProps) => (
   <div>
-    <h2>💼 Work Experience</h2>
+    <StyledText type="h2">💼 Work Experience</StyledText>
     <List>
       {props.workExperience.map(we => (
         <WorkExperience {...we} key={we.id} />
