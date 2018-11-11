@@ -1,10 +1,5 @@
 import styled from "styled-components";
 
-type Props = {
-  children?: Node;
-  className?: string;
-};
-
 export const Container = styled.div`
   max-width: 900px;
   margin: 0 auto;
