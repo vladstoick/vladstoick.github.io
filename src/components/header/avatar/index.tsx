@@ -1,6 +1,6 @@
 import * as React from "react";
-import StyledText from "../../text";
 import styled from "styled-components";
+import StyledText from "../../text";
 
 interface IAvatarProps {
   imageUrl: string;

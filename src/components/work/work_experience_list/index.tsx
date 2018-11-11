@@ -1,8 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
 import { IWorkExperienceItemType } from "../../../pages/work";
-import WorkExperience from "../work_experience";
 import StyledText from "../../text";
+import WorkExperience from "../work_experience";
 
 const List = styled.div`
   & > div:not(:first-child) {

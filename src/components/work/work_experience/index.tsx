@@ -1,8 +1,8 @@
 import * as React from "react";
-import WorkTitle from "../work_title";
-import { IWorkExperienceItemType } from "../../../pages/work";
 import styled from "styled-components";
+import { IWorkExperienceItemType } from "../../../pages/work";
 import StyledText from "../../text";
+import WorkTitle from "../work_title";
 
 const Blurb = styled.blockquote`
   margin: 0em 0em 1em 0em;

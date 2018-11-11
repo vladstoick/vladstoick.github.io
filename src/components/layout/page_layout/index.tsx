@@ -1,10 +1,10 @@
 import { graphql, StaticQuery } from "gatsby";
 import * as React from "react";
 import Helmet from "react-helmet";
+import { createGlobalStyle } from "styled-components";
+import Avatar from "../../header/avatar";
 import Navigation from "../../header/navigation";
 import { CentredRow, Container } from "../grid";
-import Avatar from "../../header/avatar";
-import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,400i,700");

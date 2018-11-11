@@ -22,7 +22,7 @@ export interface IWorkExperienceItemType
   extends IWorkExperienceJson,
     IWorkExperienceMarkdown {}
 
-interface WorkPageProps {
+interface IWorkPageProps {
   data: {
     allWorkJson: {
       edges: [
@@ -41,7 +41,7 @@ interface WorkPageProps {
   };
 }
 
-const WorkPage = (props: WorkPageProps) => {
+const WorkPage = (props: IWorkPageProps) => {
   const data = props.data;
 
   const mergedData: IWorkExperienceItemType[] = data.allWorkJson.edges.map(
@@ -51,7 +51,7 @@ const WorkPage = (props: WorkPageProps) => {
       });
 
       if (relevantMarkdown == null) {
-        throw "Could not find markdown for json";
+        throw new Error("Could not find markdown for json");
       }
 
       return { ...item.node, ...relevantMarkdown.node };

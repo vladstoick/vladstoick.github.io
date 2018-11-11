@@ -1,13 +1,13 @@
 import * as React from "react";
-import { Row } from "../../layout/grid";
 import styled from "styled-components";
+import { Row } from "../../layout/grid";
 import StyledText from "../../text";
 
-type WorkEducationHeadlineProps = {
+interface IWorkEducationHeadlineProps {
   title: string;
   location: string;
   period: string;
-};
+}
 
 const HeadlineRow = styled(Row)`
   justify-content: space-between;
@@ -18,7 +18,7 @@ const HeadlineRow = styled(Row)`
   }
 `;
 
-const WorkTitle = (props: WorkEducationHeadlineProps) => (
+const WorkTitle = (props: IWorkEducationHeadlineProps) => (
   <HeadlineRow>
     <StyledText type="p">
       <StyledText type="span" fontWeight="bold">

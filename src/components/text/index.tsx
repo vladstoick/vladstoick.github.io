@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 
-interface TextProps {
+interface ITextProps {
   children: React.ReactChild | React.ReactChild[];
   type: "h1" | "h2" | "p" | "span";
   fontWeight?: "normal" | "bold";
@@ -9,7 +9,7 @@ interface TextProps {
   className?: string;
 }
 
-const Text = (props: TextProps) => {
+const Text = (props: ITextProps) => {
   if (props.type === "h1") {
     return <h1 className={props.className}>{props.children}</h1>;
   } else if (props.type === "h2") {
@@ -21,7 +21,7 @@ const Text = (props: TextProps) => {
   }
 };
 
-function calculateFontWeight(props: TextProps) {
+function calculateFontWeight(props: ITextProps) {
   if (props.fontWeight === "bold") {
     return 700;
   } else if (props.type === "h1" || props.type === "h2") {
@@ -31,7 +31,7 @@ function calculateFontWeight(props: TextProps) {
   }
 }
 
-const StyledText = styled<TextProps>(Text)`
+const StyledText = styled<ITextProps>(Text)`
   font-weight: ${props => calculateFontWeight(props)};
   color: ${props =>
     props.color !== null ? props.color : "hsla(0, 0 %, 0 %, 0.7)"};
