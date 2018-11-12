@@ -1,18 +1,19 @@
 import { graphql } from "gatsby";
 import * as React from "react";
 import PageLayout from "../components/layout/page_layout";
+import { renderAst } from "../utils/markdown";
 
 interface IIndexPageProps {
   data: {
     markdownRemark: {
-      html: string;
+      htmlAst: string;
     };
   };
 }
 
 const IndexPage = (props: IIndexPageProps) => (
   <PageLayout>
-    <div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }} />
+    <div>{renderAst(props.data.markdownRemark.htmlAst)}</div>
   </PageLayout>
 );
 
@@ -21,7 +22,7 @@ export default IndexPage;
 export const pageQuery = graphql`
   query IndexPage {
     markdownRemark(frontmatter: { title: { eq: "HomepageBlurb" } }) {
-      html
+      htmlAst
     }
   }
 `;

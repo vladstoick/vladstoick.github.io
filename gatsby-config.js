@@ -35,7 +35,12 @@ module.exports = {
         name: "json"
       }
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: ["gatsby-remark-component"]
+      }
+    },
     `gatsby-transformer-json`,
     `gatsby-plugin-tslint`
   ]
