@@ -1,9 +1,13 @@
 import * as React from "react";
 import styled from "styled-components";
 
+type Headers = "h1" | "h2" | "h3";
+type OtherTypes = "p" | "span";
+type TextType = Headers | OtherTypes;
+
 interface ITextProps {
   children: React.ReactChild | React.ReactChild[];
-  type: "h1" | "h2" | "h3" | "p" | "span";
+  type: TextType;
   fontWeight?: "normal" | "bold";
   fontStyle?: "italic";
   color?: string;
@@ -27,7 +31,11 @@ const Text = (props: ITextProps) => {
 function calculateFontWeight(props: ITextProps) {
   if (props.fontWeight === "bold") {
     return 700;
-  } else if (props.type === "h1" || props.type === "h2") {
+  } else if (
+    props.type === "h1" ||
+    props.type === "h2" ||
+    props.type === "h3"
+  ) {
     return 200;
   } else {
     return 400;
