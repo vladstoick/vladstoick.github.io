@@ -53,6 +53,10 @@ export const renderAst = new rehypeReact({
       );
     } else if (component === "div") {
       return React.createElement(component, props, children);
+    } else if (component === "ul") {
+      return <ul key={props.key}>{children}</ul>;
+    } else if (component === "li") {
+      return <li key={props.key}>{children}</li>;
     } else {
       return <div>NOT ABLE TO HANDLE {component}</div>;
     }

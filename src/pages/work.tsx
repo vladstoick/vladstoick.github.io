@@ -12,7 +12,7 @@ interface IWorkExperienceJson {
 }
 
 interface IWorkExperienceMarkdown {
-  html: string;
+  htmlAst: string;
   frontmatter: {
     title: string;
   };
@@ -84,7 +84,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/.*work.*/" } }) {
       edges {
         node {
-          html
+          htmlAst
           frontmatter {
             title
           }

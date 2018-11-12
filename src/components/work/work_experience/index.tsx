@@ -1,6 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import { IWorkExperienceItemType } from "../../../pages/work";
+import { renderAst } from "../../../utils/markdown";
 import StyledText from "../../text";
 import WorkTitle from "../work_title";
 
@@ -40,9 +41,7 @@ const WorkExperience = (props: IWorkExperienceItemType) => (
       location={props.companyName}
       period={props.time}
     />
-    <Blurb>
-      <div dangerouslySetInnerHTML={{ __html: props.html }} />
-    </Blurb>
+    <Blurb>{renderAst(props.htmlAst)}</Blurb>
     <TagList>
       {props.tags.map(tag => (
         <Tag key={tag} type="span">
