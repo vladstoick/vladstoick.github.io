@@ -9,27 +9,14 @@ export const renderAst = new rehypeReact({
     props: any = {},
     children: React.ReactChild[] = []
   ) => {
-    if (component === "h1") {
+    if (
+      component === "h1" ||
+      component === "h2" ||
+      component === "h3" ||
+      component === "p"
+    ) {
       return (
-        <StyledText type="h1" key={props.key}>
-          {children}
-        </StyledText>
-      );
-    } else if (component === "h2") {
-      return (
-        <StyledText type="h2" key={props.key}>
-          {children}
-        </StyledText>
-      );
-    } else if (component === "h3") {
-      return (
-        <StyledText type="h3" key={props.key}>
-          {children}
-        </StyledText>
-      );
-    } else if (component === "p") {
-      return (
-        <StyledText type="p" key={props.key}>
+        <StyledText type={component} key={props.key}>
           {children}
         </StyledText>
       );
