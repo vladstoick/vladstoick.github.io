@@ -45,18 +45,13 @@ export const renderAst = new rehypeReact({
           {children}
         </StyledText>
       );
-    } else if (component === "a") {
-      return (
-        <Link to={props.href} key={props.key}>
-          {children}
-        </Link>
-      );
-    } else if (component === "div") {
+    } else if (
+      component === "div" ||
+      component === "a" ||
+      component === "ul" ||
+      component === "li"
+    ) {
       return React.createElement(component, props, children);
-    } else if (component === "ul") {
-      return <ul key={props.key}>{children}</ul>;
-    } else if (component === "li") {
-      return <li key={props.key}>{children}</li>;
     } else {
       return <div>NOT ABLE TO HANDLE {component}</div>;
     }
