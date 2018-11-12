@@ -3,8 +3,9 @@ import styled from "styled-components";
 
 interface ITextProps {
   children: React.ReactChild | React.ReactChild[];
-  type: "h1" | "h2" | "p" | "span";
+  type: "h1" | "h2" | "h3" | "p" | "span";
   fontWeight?: "normal" | "bold";
+  fontStyle?: "italic";
   color?: string;
   className?: string;
 }
@@ -14,6 +15,8 @@ const Text = (props: ITextProps) => {
     return <h1 className={props.className}>{props.children}</h1>;
   } else if (props.type === "h2") {
     return <h2 className={props.className}>{props.children}</h2>;
+  } else if (props.type === "h3") {
+    return <h3 className={props.className}>{props.children}</h3>;
   } else if (props.type === "p") {
     return <p className={props.className}>{props.children}</p>;
   } else if (props.type === "span") {
@@ -33,6 +36,8 @@ function calculateFontWeight(props: ITextProps) {
 
 const StyledText = styled<ITextProps>(Text)`
   font-weight: ${props => calculateFontWeight(props)};
+  font-style: ${props =>
+    props.fontStyle !== null ? props.fontStyle : "normal"};
   color: ${props =>
     props.color !== null ? props.color : "hsla(0, 0 %, 0 %, 0.7)"};
 `;

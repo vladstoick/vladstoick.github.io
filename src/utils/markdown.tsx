@@ -21,6 +21,12 @@ export const renderAst = new rehypeReact({
           {children}
         </StyledText>
       );
+    } else if (component === "h3") {
+      return (
+        <StyledText type="h3" key={props.key}>
+          {children}
+        </StyledText>
+      );
     } else if (component === "p") {
       return (
         <StyledText type="p" key={props.key}>
@@ -30,6 +36,12 @@ export const renderAst = new rehypeReact({
     } else if (component === "strong") {
       return (
         <StyledText type="span" fontWeight="bold" key={props.key}>
+          {children}
+        </StyledText>
+      );
+    } else if (component === "em") {
+      return (
+        <StyledText type="span" fontStyle="italic" key={props.key}>
           {children}
         </StyledText>
       );
