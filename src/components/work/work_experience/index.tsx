@@ -1,9 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
-import { IWorkExperienceItemType } from "../../../pages/work";
+import { IWorkExperienceMarkdown } from "../../../pages/work";
 import { renderAst } from "../../../utils/markdown";
 import StyledText from "../../common/StyledText";
-import WorkTitle from "../work_title";
 
 export const TagList = styled.div`
   flex-wrap: wrap;
@@ -19,15 +18,8 @@ export const Tag = styled(StyledText)`
   font-size: 0.7em;
 `;
 
-const WorkExperience = (props: IWorkExperienceItemType) => (
-  <div key={props.id}>
-    <WorkTitle
-      title={props.title}
-      location={props.companyName}
-      period={props.time}
-    />
-    {renderAst(props.htmlAst)}
-  </div>
+const WorkExperience = (props: IWorkExperienceMarkdown) => (
+  <div>{renderAst(props.htmlAst)}</div>
 );
 
 export default WorkExperience;

@@ -1,6 +1,13 @@
 ---
 title: "wonderbly"
+order: 2
 ---
+
+<WorkTitle
+  title="Back-end Engineer"
+  location="Wonderbly (formerly LostMy.Name)"
+  period="July 2015 - April 2018"
+/>
 
 > Part of the core team that looked over the e-commerce engine built in Solidus.
 > The team handled the funnel after cart: payments, shipping, tracking shipment

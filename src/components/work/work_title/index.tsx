@@ -18,7 +18,7 @@ const HeadlineRow = styled(Row)`
   }
 `;
 
-const WorkTitle = (props: IWorkEducationHeadlineProps) => (
+export const WorkTitle = (props: IWorkEducationHeadlineProps) => (
   <HeadlineRow>
     <StyledText type="p">
       <StyledText type="span" fontWeight="bold">

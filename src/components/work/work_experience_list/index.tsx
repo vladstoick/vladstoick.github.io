@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import { IWorkExperienceItemType } from "../../../pages/work";
+import { IWorkExperienceMarkdown } from "../../../pages/work";
 import StyledText from "../../common/StyledText";
 import WorkExperience from "../work_experience";
 
@@ -11,15 +11,15 @@ const List = styled.div`
 `;
 
 interface IWorkExperienceProps {
-  workExperience: IWorkExperienceItemType[];
+  workExperience: IWorkExperienceMarkdown[];
 }
 
 const WorkExperienceList = (props: IWorkExperienceProps) => (
   <div>
     <StyledText type="h2">💼 Work Experience</StyledText>
     <List>
-      {props.workExperience.map(we => (
-        <WorkExperience {...we} key={we.id} />
+      {props.workExperience.map((we, i) => (
+        <WorkExperience {...we} key={i} />
       ))}
     </List>
   </div>

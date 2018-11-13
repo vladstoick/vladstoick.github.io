@@ -3,6 +3,7 @@ import rehypeReact from "rehype-react";
 import { Blurb } from "../components/common/Blockquote";
 import StyledText from "../components/common/StyledText";
 import { Tag, TagList } from "../components/work/work_experience";
+import WorkTitle from "../components/work/work_title";
 
 export const createElement = (
   component: string,
@@ -42,6 +43,8 @@ export const createElement = (
     );
   } else if (component === "blockquote") {
     return <Blurb key={props.key}>{children}</Blurb>;
+  } else if (component === "worktitle") {
+    return <WorkTitle {...props} />;
   } else if (
     component === "div" ||
     component === "a" ||
@@ -50,7 +53,11 @@ export const createElement = (
   ) {
     return React.createElement(component, props, children);
   } else {
-    return <div>NOT ABLE TO HANDLE {component}</div>;
+    return (
+      <div key={props.key}>
+        NOT ABLE TO HANDLE {component} with props {props}
+      </div>
+    );
   }
 };
 
