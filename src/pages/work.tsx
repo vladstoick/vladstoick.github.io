@@ -6,7 +6,6 @@ import WorkExperienceList from "../components/work/work_experience_list";
 interface IWorkExperienceJson {
   companyName: string;
   time: string;
-  tags: [string];
   title: string;
   id: string;
 }

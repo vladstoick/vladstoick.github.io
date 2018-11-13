@@ -1,24 +1,16 @@
-[{
+[
+  {
     "id": "facebook",
     "companyName": "Facebook",
     "title": "Software Engineer",
     "order": 1,
-    "time": "August 2018 - present",
-    "tags": ["PHP (Hack)", "React", "Relay", "React Native", "GraphQL", "IDP"]
+    "time": "August 2018 - present"
   },
   {
     "id": "wonderbly",
     "companyName": "Wonderbly (formerly LostMy.Name)",
     "title": "Back-end Engineer",
     "order": 2,
-    "time": "July 2015 - April 2018",
-    "tags": [
-      "Ruby on Rails",
-      "Solidus",
-      "E-commerce",
-      "Twilio",
-      "Aftership",
-      "SQL(Postgres)"
-    ]
+    "time": "July 2015 - April 2018"
   }
 ]

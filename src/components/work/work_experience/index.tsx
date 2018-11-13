@@ -5,27 +5,12 @@ import { renderAst } from "../../../utils/markdown";
 import StyledText from "../../text";
 import WorkTitle from "../work_title";
 
-const Blurb = styled.blockquote`
-  margin: 0em 0em 1em 0em;
-  padding: 0 0.5em;
-  color: hsla(0, 0%, 0%, 0.6);
-  border-left: 0.39rem solid hsla(0, 0%, 0%, 0.13);
-  font-size: 1em;
-  p {
-    margin-bottom: 0.5em;
-  }
-
-  li {
-    margin-bottom: 0px;
-  }
-`;
-
-const TagList = styled.div`
+export const TagList = styled.div`
   flex-wrap: wrap;
   margin-bottom: 0.5em;
 `;
 
-const Tag = styled(StyledText)`
+export const Tag = styled(StyledText)`
   background-color: #e37b40;
   color: white;
   margin: 2px 5px;
@@ -41,14 +26,7 @@ const WorkExperience = (props: IWorkExperienceItemType) => (
       location={props.companyName}
       period={props.time}
     />
-    <Blurb>{renderAst(props.htmlAst)}</Blurb>
-    <TagList>
-      {props.tags.map(tag => (
-        <Tag key={tag} type="span">
-          {tag}
-        </Tag>
-      ))}
-    </TagList>
+    {renderAst(props.htmlAst)}
   </div>
 );
 
