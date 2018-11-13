@@ -33,14 +33,6 @@ export default WorkPage;
 
 export const pageQuery = graphql`
   query WorkPage {
-    allWorkJson {
-      edges {
-        node {
-          id
-        }
-      }
-    }
-
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/.*work.*/" } }
       sort: { order: ASC, fields: [frontmatter___order] }

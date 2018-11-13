@@ -34,7 +34,6 @@ module.exports = {
         plugins: ["gatsby-remark-component"]
       }
     },
-    `gatsby-transformer-json`,
     `gatsby-plugin-tslint`
   ]
 };
