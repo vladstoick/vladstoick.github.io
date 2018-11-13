@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
-import { Row } from "../../layout/grid";
-import StyledText from "../../text";
+import { Row } from "../../common/Grid";
+import StyledText from "../../common/StyledText";
 
 interface IWorkEducationHeadlineProps {
   title: string;

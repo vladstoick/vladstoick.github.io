@@ -1,7 +1,7 @@
 import * as React from "react";
 import rehypeReact from "rehype-react";
-import { Blurb } from "../components/common/blockquote";
-import StyledText from "../components/text";
+import { Blurb } from "../components/common/Blockquote";
+import StyledText from "../components/common/StyledText";
 import { Tag, TagList } from "../components/work/work_experience";
 
 export const createElement = (

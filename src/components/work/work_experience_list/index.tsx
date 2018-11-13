@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import { IWorkExperienceItemType } from "../../../pages/work";
-import StyledText from "../../text";
+import StyledText from "../../common/StyledText";
 import WorkExperience from "../work_experience";
 
 const List = styled.div`

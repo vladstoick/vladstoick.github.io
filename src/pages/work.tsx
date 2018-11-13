@@ -1,6 +1,6 @@
 import { graphql } from "gatsby";
 import * as React from "react";
-import PageLayout from "../components/layout/page_layout";
+import PageLayout from "../components/common/PageLayout";
 import WorkExperienceList from "../components/work/work_experience_list";
 
 interface IWorkExperienceJson {
@@ -73,7 +73,6 @@ export const pageQuery = graphql`
         node {
           companyName
           time
-          tags
           title
           id
         }

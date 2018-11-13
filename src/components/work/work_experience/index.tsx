@@ -2,7 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 import { IWorkExperienceItemType } from "../../../pages/work";
 import { renderAst } from "../../../utils/markdown";
-import StyledText from "../../text";
+import StyledText from "../../common/StyledText";
 import WorkTitle from "../work_title";
 
 export const TagList = styled.div`

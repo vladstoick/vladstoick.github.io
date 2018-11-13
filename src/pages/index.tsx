@@ -1,6 +1,6 @@
 import { graphql } from "gatsby";
 import * as React from "react";
-import PageLayout from "../components/layout/page_layout";
+import PageLayout from "../components/common/PageLayout";
 import { renderAst } from "../utils/markdown";
 
 interface IIndexPageProps {
