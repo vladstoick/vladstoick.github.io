@@ -29,13 +29,6 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/json`,
-        name: "json"
-      }
-    },
-    {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: ["gatsby-remark-component"]

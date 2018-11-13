@@ -4274,10 +4274,6 @@ gatsby-link@^2.0.6:
     "@types/reach__router" "^1.0.0"
     prop-types "^15.6.1"
 
-gatsby-plugin-eslint@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-eslint/-/gatsby-plugin-eslint-2.0.1.tgz#88641be50b95a867416878c43b64458a2d6b9c21"
-
 gatsby-plugin-page-creator@^2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-page-creator/-/gatsby-plugin-page-creator-2.0.4.tgz#d35a8eb3483f06a388a3a188f2fe460d66c76cf6"
@@ -4348,13 +4344,6 @@ gatsby-source-filesystem@^2.0.8:
     slash "^1.0.0"
     valid-url "^1.0.9"
     xstate "^3.1.0"
-
-gatsby-transformer-json@^2.1.4:
-  version "2.1.5"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-json/-/gatsby-transformer-json-2.1.5.tgz#55b383ac0481d6eef5d6e869eef79789df7fe3fa"
-  dependencies:
-    "@babel/runtime" "^7.0.0"
-    bluebird "^3.5.0"
 
 gatsby-transformer-remark@^2.1.6:
   version "2.1.12"
