@@ -24,7 +24,7 @@
     "react-router-dom": "^4.3.1",
     "rehype-react": "^3.0.3",
     "styled-components": "^4.0.3",
-    "typescript": "^3.1.6"
+    "typescript": "^3.7.5"
   },
   "keywords": [
     "gatsby"
