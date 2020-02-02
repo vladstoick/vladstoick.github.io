@@ -33,7 +33,6 @@ module.exports = {
       options: {
         plugins: ["gatsby-remark-component"]
       }
-    },
-    `gatsby-plugin-tslint`
+    }
   ]
 };
