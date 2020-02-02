@@ -7,12 +7,8 @@ import Navigation from "../header/navigation";
 import { CentredRow, Container } from "./Grid";
 
 const GlobalStyle = createGlobalStyle`
-  @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,400i,700");
-
   html {
     font: 112.5%/1.56 "Source Sans Pro", sans-serif;
-    /* font-family: 'Source Sans Pro', sans-serif;
-      font-size: 18px; */
     font-weight: 400;
     margin: 0;
     color: hsla(0, 0%, 0%, 0.7);
@@ -59,7 +55,12 @@ const PageLayout = (props: { children: React.ReactChild }) => (
     render={data => (
       <>
         <GlobalStyle />
-        <Helmet title={data.site.siteMetadata.title} />
+        <Helmet title={data.site.siteMetadata.title}>
+          <link
+            href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,400i,700&display=swap"
+            rel="stylesheet"
+          ></link>
+        </Helmet>
         <Container>
           <CentredRow>
             <Avatar
